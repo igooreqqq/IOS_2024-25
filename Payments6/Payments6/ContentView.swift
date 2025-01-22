@@ -11,7 +11,6 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    // Sortowanie po nazwie lub brak (dowolnie)
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Product.name, ascending: true)],
         animation: .default
@@ -40,13 +39,11 @@ struct ContentView: View {
             }
             .navigationTitle("Lista produktów")
             .toolbar {
-                // Dodajmy przycisk do dodania produktów (jeśli chcesz)
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Dodaj testowe") {
                         addSampleProducts()
                     }
                 }
-                // Przycisk do listy zakupionych
                 ToolbarItem(placement: .navigationBarLeading) {
                     NavigationLink("Zakupione") {
                         PurchasedProductsView()
@@ -56,8 +53,7 @@ struct ContentView: View {
         }
         .sheet(item: $selectedProduct) { product in
             PaymentFormView(product: product) {
-                // Nic nie musimy tu robić, bo PaymentFormView już zapisze do Core Data
-                // (albo zaktualizuje isPurchased w PaymentFormView)
+
             }
         }
     }
