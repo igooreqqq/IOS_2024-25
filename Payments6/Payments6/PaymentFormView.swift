@@ -45,7 +45,6 @@ struct PaymentFormView: View {
     }
     
     func makePayment() {
-        // Mockowe wywołanie płatności
         let paymentModel = PaymentModel(
             cardNumber: cardNumber,
             cardHolderName: cardHolderName,
@@ -56,7 +55,7 @@ struct PaymentFormView: View {
         
         PaymentService.shared.processPayment(paymentModel: paymentModel) { success in
             if success {
-                // Ustawiamy isPurchased na true i zapisujemy w Core Data
+
                 product.isPurchased = true
                 do {
                     try viewContext.save()
@@ -64,7 +63,6 @@ struct PaymentFormView: View {
                     print("Błąd zapisu: \(error.localizedDescription)")
                 }
                 
-                // Wywołanie callbacku i zamknięcie widoku
                 onPaymentSuccess()
                 presentationMode.wrappedValue.dismiss()
             } else {
