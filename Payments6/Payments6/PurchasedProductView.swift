@@ -11,7 +11,6 @@ import CoreData
 struct PurchasedProductsView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    // Pobieramy tylko kupione produkty
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Product.name, ascending: true)],
         predicate: NSPredicate(format: "isPurchased == true"),
