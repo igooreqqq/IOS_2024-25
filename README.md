@@ -103,6 +103,10 @@ https://github.com/user-attachments/assets/da4c1b16-5c3a-4632-8bdd-8ebded642d5c
 
 
 
+https://github.com/user-attachments/assets/cbf64eca-65b9-47d2-b81a-d04dd058c6b4
+
+
+
 ### Zad 7 Testy
 
 ✅ 3.0 stworzyć 30 asercji testów funkcjonalnych
