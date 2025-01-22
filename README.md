@@ -53,11 +53,11 @@
 
 ✅ 3.5 rejestracja przez aplikację serwerową
 
-✅ 4.0 logowanie via Google OAuth2
+❌ 4.0 logowanie via Google OAuth2
 
-✅ .5 logowanie via Facebook lub Github OAuth2
+❌ .5 logowanie via Facebook lub Github OAuth2
 
-✅ 5.0 zapisywanie danych logowania OAuth2 po stronie serwera
+❌ 5.0 zapisywanie danych logowania OAuth2 po stronie serwera
 
 ### Zad 6 Płatności
 
@@ -67,9 +67,9 @@
 
 ✅ 4.0 lista zakupionych (opłaconych) produktów + model
 
-✅ 4.5 wdrożenie stripe'a
+❌ 4.5 wdrożenie stripe'a
 
-✅ 5.0 dodanie skanowania kart
+❌ 5.0 dodanie skanowania kart
 
 ### Zad 7 Testy
 
